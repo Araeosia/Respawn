@@ -35,9 +35,14 @@ public class RespawnEventListener implements Listener{
 	
 	public Location getRespawnLocation(Player player){
 		world = getConfig().get("AraeosiaRespawn.locations."+player.getName()+".world");
+		getConfig().set("AraeosiaRespawn.locations."+player.getName()+".world", null);
 		X = getConfig().get("AraeosiaRespawn.locations."+player.getName()+".X");
+		getConfig().set("AraeosiaRespawn.locations."+player.getName()+".X", null);
 		Y = getConfig().get("AraeosiaRespawn.locations."+player.getName()+".Y");
+		getConfig().set("AraeosiaRespawn.locations."+player.getName()+".Y", null);
 		Z = getConfig().get("AraeosiaRespawn.locations."+player.getName()+".Z");
+		getConfig().set("AraeosiaRespawn.locations."+player.getName()+".Z", null);
+		saveConfig();
 		return Location(getServer().getWorld(world), X, Y, Z);
 	}
 	
