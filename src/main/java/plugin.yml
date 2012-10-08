@@ -1,0 +1,9 @@
+name: AraeosiaRespawn
+version: 0.1
+main: com.araeosia.Respawn.AraeosiaRespawn
+
+commands:
+  spawn:
+    description: Teleports you to the nearest spawn shack.
+    aliases: unstuck
+    usage: /spawn
